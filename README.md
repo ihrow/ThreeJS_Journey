@@ -13,6 +13,9 @@
 ![](https://i.imgur.com/vrN5kCo.png)
 
 </details>
+
+##
+
 04 - Local Server / Vite
 
 ##
@@ -75,6 +78,8 @@
 
 </details>
 
+##
+
 <details>
 <summary>&nbsp;06 - Animation</summary>
 
@@ -123,3 +128,5 @@
 ```
 
 </details>
+
+##
