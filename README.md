@@ -102,7 +102,7 @@
     gsap.to(mesh.position, { duration: 1, delay: 2, x: 0 })
 ```
 
-<video src="https://imgur.com/cwj8oSX"></video>
+https://imgur.com/cwj8oSX
 
 </details>
 
