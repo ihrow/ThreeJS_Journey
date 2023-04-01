@@ -14,6 +14,7 @@
 
 </details>
 04 - Local Server / Vite
+
 <details>
 <summary>&nbsp;05 - Transform objects</summary>
 
@@ -58,3 +59,53 @@
 ![](https://i.imgur.com/HeMqFqS.png)
 
 </details>
+
+<details>
+<summary>&nbsp;06 - Animation</summary>
+
+- Moving objects.
+```js
+    const tick = () => {
+        // Code to be executed on each frame
+
+        // Update objects
+        mesh.rotation.x += 0.01
+        mesh.rotation.y += 0.01
+
+        // Call tick again on the next frame
+        window.requestAnimationFrame(tick)
+    }
+
+    tick()
+```
+- Clock.
+```js
+    const clock = new THREE.Clock()
+
+    const tick = () => {
+        // Code to be executed on each frame
+
+        // Update objects
+        const elapsedTime = clock.getElapsedTime()
+
+        mesh.rotation.x = Math.sin(elapsedTime)
+
+        // Call tick again on the next frame
+        window.requestAnimationFrame(tick)
+    }
+
+    tick()
+```
+- GSAP
+```js
+    gsap.to(mesh.position, { duration: 1, delay: 1, x: 2 })
+    gsap.to(mesh.position, { duration: 1, delay: 2, x: 0 })
+```
+
+<video src="https://imgur.com/cwj8oSX"></video>
+
+</details>
+
+
+
+
