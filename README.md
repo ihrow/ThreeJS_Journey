@@ -6,7 +6,7 @@
 - Creating objects with materials and geometries.
 - Adding objects to the scene.
 - Adding a camera to the scene.
-    - Moving the camera.
+  - Moving the camera.
 - Creating a canvas to render the scene.
 - Adding a renderer to the canvas.
 
@@ -15,26 +15,36 @@
 </details>
 04 - Local Server / Vite
 
+##
+
+<br />
 <details>
 <summary>&nbsp;05 - Transform objects</summary>
 
 - Moving objects.
+
 ```js
     Object.position.set(x, y, z)
     // x - left and right
     // y - up and down
     // z - forward and backward
 ```
+
 - Axes helper.
+
 ```js
     const axesHelper = new THREE.AxesHelper(5)
     scene.add(axesHelper)
 ```
+
 - Scaling objects.
+
 ```js
     Object.scale.set(x, y, z)
 ```
+
 - Rotating objects.
+
 ```js
     mesh.rotation.reorder('YXZ')
     // To rotate in the order of Y, X and Z
@@ -43,12 +53,16 @@
     Object.rotation.set(x, y, z)
     // Math.PI = 180º
 ```
+
 - Pointing objects.
+
 ```js
     camera.lookAt(mesh.position)
     // Point the camera to the object
 ```
+
 - Grouping objects.
+
 ```js
     const group = new THREE.Group()
     scene.add(group)
@@ -56,6 +70,7 @@
     group.add(mesh1, mesh2, mesh3)
     // Add objects to the group
 ```
+
 ![](https://i.imgur.com/HeMqFqS.png)
 
 </details>
@@ -64,6 +79,7 @@
 <summary>&nbsp;06 - Animation</summary>
 
 - Moving objects.
+
 ```js
     const tick = () => {
         // Code to be executed on each frame
@@ -78,7 +94,9 @@
 
     tick()
 ```
+
 - Clock.
+
 ```js
     const clock = new THREE.Clock()
 
@@ -96,16 +114,12 @@
 
     tick()
 ```
+
 - GSAP
+
 ```js
     gsap.to(mesh.position, { duration: 1, delay: 1, x: 2 })
     gsap.to(mesh.position, { duration: 1, delay: 2, x: 0 })
 ```
 
-https://imgur.com/cwj8oSX
-
 </details>
-
-
-
-
