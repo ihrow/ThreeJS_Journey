@@ -1,4 +1,6 @@
-## Three JS Jorney Course
+# Three JS Jorney Course
+
+## Table of Contents
 
 <details>
 <summary>&nbsp;03 - Creating a Basic Scene</summary>
@@ -14,71 +16,65 @@
 
 </details>
 
-##
+04 - Local Server / Vite__
 
-04 - Local Server / Vite
 
-##
-
-<br />
 <details>
 <summary>&nbsp;05 - Transform objects</summary>
 
 - Moving objects.
 
 ```js
-    Object.position.set(x, y, z)
-    // x - left and right
-    // y - up and down
-    // z - forward and backward
+Object.position.set(x, y, z)
+// x - left and right
+// y - up and down
+// z - forward and backward
 ```
 
 - Axes helper.
 
 ```js
-    const axesHelper = new THREE.AxesHelper(5)
-    scene.add(axesHelper)
+const axesHelper = new THREE.AxesHelper(5)
+scene.add(axesHelper)
 ```
 
 - Scaling objects.
 
 ```js
-    Object.scale.set(x, y, z)
+Object.scale.set(x, y, z)
 ```
 
 - Rotating objects.
 
 ```js
-    mesh.rotation.reorder('YXZ')
-    // To rotate in the order of Y, X and Z
-    // To avoid the gimbal lock
+mesh.rotation.reorder('YXZ')
+// To rotate in the order of Y, X and Z
+// To avoid the gimbal lock
 
-    Object.rotation.set(x, y, z)
-    // Math.PI = 180º
+Object.rotation.set(x, y, z)
+// Math.PI = 180º
 ```
 
 - Pointing objects.
 
 ```js
-    camera.lookAt(mesh.position)
-    // Point the camera to the object
+camera.lookAt(mesh.position)
+// Point the camera to the object
 ```
 
 - Grouping objects.
 
 ```js
-    const group = new THREE.Group()
-    scene.add(group)
+const group = new THREE.Group()
+scene.add(group)
 
-    group.add(mesh1, mesh2, mesh3)
-    // Add objects to the group
+group.add(mesh1, mesh2, mesh3)
+// Add objects to the group
 ```
 
 ![](https://i.imgur.com/HeMqFqS.png)
 
 </details>
-
-##
 
 <details>
 <summary>&nbsp;06 - Animation</summary>
@@ -86,47 +82,45 @@
 - Moving objects.
 
 ```js
-    const tick = () => {
-        // Code to be executed on each frame
+const tick = () => {
+  // Code to be executed on each frame
 
-        // Update objects
-        mesh.rotation.x += 0.01
-        mesh.rotation.y += 0.01
+  // Update objects
+  mesh.rotation.x += 0.01
+  mesh.rotation.y += 0.01
 
-        // Call tick again on the next frame
-        window.requestAnimationFrame(tick)
-    }
+  // Call tick again on the next frame
+  window.requestAnimationFrame(tick)
+}
 
-    tick()
+tick()
 ```
 
 - Clock.
 
 ```js
-    const clock = new THREE.Clock()
+const clock = new THREE.Clock()
 
-    const tick = () => {
-        // Code to be executed on each frame
+const tick = () => {
+  // Code to be executed on each frame
 
-        // Update objects
-        const elapsedTime = clock.getElapsedTime()
+  // Update objects
+  const elapsedTime = clock.getElapsedTime()
 
-        mesh.rotation.x = Math.sin(elapsedTime)
+  mesh.rotation.x = Math.sin(elapsedTime)
 
-        // Call tick again on the next frame
-        window.requestAnimationFrame(tick)
-    }
+  // Call tick again on the next frame
+  window.requestAnimationFrame(tick)
+}
 
-    tick()
+tick()
 ```
 
 - GSAP
 
 ```js
-    gsap.to(mesh.position, { duration: 1, delay: 1, x: 2 })
-    gsap.to(mesh.position, { duration: 1, delay: 2, x: 0 })
+gsap.to(mesh.position, { duration: 1, delay: 1, x: 2 })
+gsap.to(mesh.position, { duration: 1, delay: 2, x: 0 })
 ```
 
 </details>
-
-##
