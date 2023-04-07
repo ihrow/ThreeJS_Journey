@@ -49,101 +49,141 @@ const canvas = document.querySelector("canvas.webgl");
 const scene = new THREE.Scene();
 
 /**
- * Objects
+ * Materials
  */
+
+// =====================
+// Basic Material
+// =====================
 // const material = new THREE.MeshBasicMaterial();
 // material.color.set(...)
 
-// material.wireframe = true | false;
-// material.wireframe = true;
+// true | false;
+// material.wireframe = true; // debug
+// material.opacity = 0.5; // 0 - 1
+// material.transparent = true; // true | false
+// material.alphaMap = doorAlphaTexture; // alpha map
+// material.map = doorColorTexture; // texture
 
-// material.opacity = 0.5;
-
-// material.transparent = true;
-// material.alphaMap = doorAlphaTexture;
-// material.map = doorColorTexture;
-
-// material.side = THREE.FrontSide | THREE.BackSide | THREE.DoubleSide
-// material.side = THREE.DoubleSide;
+// material.side - Which side of the face to render
+// material.side = THREE.DoubleSide; // SingleSide | DoubleSide | BackSide
 
 // const material = new THREE.MeshNormalMaterial(); // debug normals
 // material.flatShading = true;
 
+// =====================
+// Matcap Material
+// =====================
 // const material = new THREE.MeshMatcapMaterial();
 // material.matcap = matcapTexture;
 
+// =====================
+// Depth Material
+// =====================
 // const material = new THREE.MeshDepthMaterial();
 
+// =====================
+// Lambert Material
+// =====================
 // const material = new THREE.MeshLambertMaterial();
 
+// =====================
+// Phong Material
+// =====================
 // const material = new THREE.MeshPhongMaterial();
 // material.shininess = 100;
 // material.specular = new THREE.Color("blue");
 
+// =====================
+// Toon Material
+// =====================
 // const material = new THREE.MeshToonMaterial();
 // material.gradientMap = gradientTexture;
 
-// const material = new THREE.MeshStandardMaterial();
+// =====================
+// Standart Material
+// =====================
+const material = new THREE.MeshStandardMaterial();
 
-// Custom metalness and roughness values
-// material.metalness = 0.45;
-// material.roughness = 0.45;
-// material.transparent = true;
+/**
+ * Custom metalness and roughness values
+ */
+material.metalness = 0.45; // dont use with metalness map
+material.roughness = 0.45; // dont use with roughness map
+material.transparent = true;
 
-// Basic texture
-// material.map = doorColorTexture;
+/**
+ * Basic Material
+ */
+material.map = doorColorTexture;
 
-// Ambient Occlusion Map
-// material.aoMap = doorAmbientcOcclusionTexture;
-// material.aoMapIntensity = 1;
+/**
+ * Ambient Occlusion Map
+ */
+material.aoMap = doorAmbientcOcclusionTexture;
+material.aoMapIntensity = 1;
 
-// Displacement Map (height map)
-// material.displacementMap = doorHeightTexture;
-// material.displacementScale = 0.03;
+/**
+ * Displacement Map
+ */
+material.displacementMap = doorHeightTexture;
+material.displacementScale = 0.03;
 
-// Metalness Map
-// material.metalnessMap = doorMetalnessTexture;
+/**
+ * Metalness Map
+ */
+material.metalnessMap = doorMetalnessTexture;
 
-// Roughness Map
-// material.roughnessMap = doorRoughnessTexture;
+/**
+ * Roughness Map
+ */
+material.roughnessMap = doorRoughnessTexture;
 
-// Normal Map
-// material.normalMap = doorNormalTexture;
-// const parameters = {
-//   x: 1,
-//   y: 1,
-// };
-// material.normalScale.set(parameters.x, parameters.y);
+/**
+ * Normal Map
+ */
+material.normalMap = doorNormalTexture;
+const parameters = {
+  x: 1,
+  y: 1,
+};
+material.normalScale.set(parameters.x, parameters.y);
 
 // Alpha Map
-// material.alphaMap = doorAlphaTexture;
+material.alphaMap = doorAlphaTexture;
 
-const material = new THREE.MeshStandardMaterial();
-material.metalness = 0.7;
-material.roughness = 0.2;
-material.envMap = environmentMapTexture;
+// =====================
+// Environmental Material
+// =====================
+// const material = new THREE.MeshStandardMaterial();
+// material.metalness = 0.7;
+// material.roughness = 0.2;
+// material.envMap = environmentMapTexture;
 
 gui.add(material, "roughness").min(0).max(1);
 gui.add(material, "metalness").min(0).max(1);
 gui.add(material, "aoMapIntensity").min(1).max(15);
 gui.add(material, "displacementScale").min(0.01).max(0.2).step(0.01);
-// gui
-//   .add(parameters, "x")
-//   .min(1)
-//   .max(20)
-//   .step(0.1)
-//   .onChange(() => {
-//     material.normalScale.set(parameters.x, parameters.y);
-//   });
-// gui
-//   .add(parameters, "y")
-//   .min(1)
-//   .max(20)
-//   .step(0.1)
-//   .onChange(() => {
-//     material.normalScale.set(parameters.x, parameters.y);
-//   });
+gui
+  .add(parameters, "x")
+  .min(1)
+  .max(20)
+  .step(0.1)
+  .onChange(() => {
+    material.normalScale.set(parameters.x, parameters.y);
+  });
+gui
+  .add(parameters, "y")
+  .min(1)
+  .max(20)
+  .step(0.1)
+  .onChange(() => {
+    material.normalScale.set(parameters.x, parameters.y);
+  });
 
+/**
+ * Objects
+ */
 const sphere = new THREE.Mesh(new THREE.SphereGeometry(0.5, 64, 64), material);
 sphere.geometry.setAttribute(
   "uv2",
