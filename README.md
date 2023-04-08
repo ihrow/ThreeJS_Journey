@@ -21,7 +21,7 @@
   ### [15-lights](https://threejs-journey-lights.netlify.app/)
   ![](https://i.imgur.com/Ar0PAXL.png)
 
-  ### [15-lights](https://threejs-journey-shadows.netlify.app/)
+  ### [16-shadows](https://threejs-journey-shadows.netlify.app/)
   ![](https://i.imgur.com/jMBuV36.png)
 
 
