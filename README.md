@@ -24,8 +24,11 @@
   ### [16-shadows](https://threejs-journey-shadows.netlify.app/)
   ![](https://i.imgur.com/jMBuV36.png)
 
-   ### [17-haunted-house](https://threejs-journey-house.netlify.app//)
+   ### [17-haunted-house](https://threejs-journey-house.netlify.app/)
   ![](https://i.imgur.com/zjZeuQw.jpg)
+
+  ### [18-particles](https://threejs-journey-particles.netlify.app/)
+  ![](https://i.imgur.com/LCdX1DU.jpg)
 
 </details>
 
