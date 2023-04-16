@@ -34,7 +34,7 @@
   ![](https://i.imgur.com/cRV2qDz.png)
 
   ### [20-scroll-based-animation](https://threejs-journey-scroll-based-anims.netlify.app/)
-  ![](https://imgur.com/7Hr3yAm.gif)
+  ![](https://i.imgur.com/ZSnpGKD.gif)
   
 
 </details>
