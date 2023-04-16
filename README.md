@@ -33,5 +33,9 @@
   ### [19-galaxy](https://threejs-journey-galaxy.netlify.app/)
   ![](https://i.imgur.com/cRV2qDz.png)
 
+  ### [20-scroll-based-animation](https://threejs-journey-scroll-based-anims.netlify.app/)
+  ![](https://i.imgur.com/ADKOVqO.mp4)
+  
+
 </details>
 
