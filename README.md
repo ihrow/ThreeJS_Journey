@@ -36,6 +36,12 @@
   ### [20-scroll-based-animation](https://threejs-journey-scroll-based-anims.netlify.app/)
   ![](https://i.imgur.com/ZSnpGKD.gif)
   
+</details>
 
+<details>
+<summary><b>Chapter 03. Advanced techniques</b></summary>
+
+  ### [21-physics](https://threejs-journey-physics.netlify.app/)
+  ![](https://i.imgur.com/mS2pMrU.png)
 </details>
 
