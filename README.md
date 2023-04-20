@@ -43,5 +43,8 @@
 
   ### [21-physics](https://threejs-journey-physics.netlify.app/)
   ![](https://i.imgur.com/mS2pMrU.png)
+
+  ### [22-importing-models](https://threejs-journey-importing-models.netlify.app/)
+  ![](https://i.imgur.com/J6tvn3Z.png)
 </details>
 
