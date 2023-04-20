@@ -3,9 +3,10 @@
 [ThreeJS Journey Course](https://threejs-journey.xyz/) is a course that teaches you how to create the coolest WebGL websites with [ThreeJS](https://threejs.org/).
 
 # Showcase.
+## Native JavaScript
 <details>
   <summary><b>Chapter 01. Basics</b></summary>
-  
+
   ### [11-textures](https://threejs-journey-textures.netlify.app/)
   ![](https://i.imgur.com/kUUHLkt.png)
 
@@ -47,4 +48,13 @@
   ### [22-importing-models](https://threejs-journey-importing-models.netlify.app/)
   ![](https://i.imgur.com/J6tvn3Z.png)
 </details>
+
+## React Three Fiber
+<details> 
+  <summary>React Three JS</summary>
+
+  ### [42-r3f-app](https://threejs-journey-r3f-app.netlify.app/)
+  ![](https://i.imgur.com/qLvpaSY.png)
+</details>
+
 
