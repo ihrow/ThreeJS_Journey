@@ -52,9 +52,12 @@
 ## React Three Fiber
 <details> 
   <summary>React Three JS</summary>
-
+  
   ### [42-r3f-app](https://threejs-journey-r3f-app.netlify.app/)
   ![](https://i.imgur.com/qLvpaSY.png)
+
+  ### [43-drei](https://threejs-journey-r3f-drei.netlify.app/)
+  ![](https://i.imgur.com/oOIYIZX.png)
 </details>
 
 
