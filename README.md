@@ -58,6 +58,9 @@
 
   ### [43-drei](https://threejs-journey-r3f-drei.netlify.app/)
   ![](https://i.imgur.com/oOIYIZX.png)
+
+  ### [44-debug](https://threejs-journey-r3f-debug.netlify.app/)
+  ![](https://i.imgur.com/8F2XgT4.png)
 </details>
 
 
