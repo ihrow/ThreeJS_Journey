@@ -61,6 +61,9 @@
 
   ### [44-debug](https://threejs-journey-r3f-debug.netlify.app/)
   ![](https://i.imgur.com/8F2XgT4.png)
+
+  ### [45-environment-and-staging](https://threejs-journey-env-and-staging.netlify.app/)
+  ![](https://i.imgur.com/vb83Cu7.jpg)
 </details>
 
 
